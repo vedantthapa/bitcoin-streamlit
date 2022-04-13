@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*-coding:utf-8 -*-
+'''
+@File    :   bitcoin.py
+@Time    :   2022/04/13 15:06:36
+@Author  :   Vedant Thapa 
+@Contact :   thapavedant@gmail.com
+'''
+
 import requests
 import pandas as pd
 import altair as alt
