@@ -36,11 +36,11 @@ def plot_prices(source, x="Date", y="Prices", include_zero=True, rule=False):
     area = (
         base
         .mark_area(
-            line={'color': 'darkgreen'},
+            line={'color': 'gray'},
             color=alt.Gradient(
                 gradient='linear',
                 stops=[alt.GradientStop(color='white', offset=0.05),
-                       alt.GradientStop(color='darkgreen', offset=1)],
+                       alt.GradientStop(color='gray', offset=1)],
                 x1=1,
                 x2=1,
                 y1=1,
@@ -61,7 +61,7 @@ def plot_prices(source, x="Date", y="Prices", include_zero=True, rule=False):
         .add_selection(hover)
     )
     if rule:
-        rule = base.mark_rule(strokeDash=[12, 6], size=1.5).encode(
+        rule = base.mark_rule(strokeDash=[12, 6], size=3, color='red').encode(
             y='average(Prices)',
         )
         return (area + rule + tooltips)
